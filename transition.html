@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Transição para o mapa</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <video id="transitionVideo" autoplay muted playsinline preload="auto" aria-hidden="true">
+    <source src="/videos/10.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+
+  <script>
+    const video = document.getElementById('transitionVideo');
+    const navigateToMap = () => {
+      window.location.assign('./src/pages/index.html');
+    };
+
+    video.addEventListener('ended', navigateToMap, { once: true });
+    video.addEventListener('error', navigateToMap, { once: true });
+
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      navigateToMap();
+    } else {
+      video.play().catch(navigateToMap);
+    }
+  </script>
+</body>
+</html>

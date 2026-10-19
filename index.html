@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Missões do CTM</title>
+
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+
+<body>
+
+  <!-- Vídeo de fundo -->
+  <div class="video_container" aria-hidden="true">
+    <video autoplay muted loop playsinline id="bgVideo" preload="metadata">
+      <source src="/videos/9.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <!-- Seletor de idioma -->
+  <div class="language-switcher" role="group" aria-label="Selecionar idioma">
+    <button type="button" class="language-option active" data-lang="pt" aria-pressed="true">PT</button>
+    <button type="button" class="language-option" data-lang="en" aria-pressed="false">EN</button>
+    <button type="button" class="language-option" data-lang="es" aria-pressed="false">ES</button>
+  </div>
+
+  <!-- Conteúdo principal -->
+  <main class="content">
+
+    <p class="eyebrow" id="eyebrow">
+      CTM BRASIL
+    </p>
+
+    <h1 class="highlight" id="welcome">
+      BEM-VINDOS
+    </h1>
+
+    <p class="sub" id="phrase">
+      PRONTO PARA CONHECER SUA MISSÃO?
+    </p>
+
+    <button
+      type="button"
+      class="mainBtn"
+      id="mainBtn"
+    >
+      CLIQUE AQUI
+    </button>
+
+  </main>
+
+  <!-- Logo CTM -->
+  <img
+    src="/images/image-removebg-preview.png"
+    class="ctm-logo"
+    alt="CTM Brasil"
+  />
+
+  <!-- Gradiente inferior -->
+  <div class="bottom-gradient"></div>
+
+  <!-- JavaScript da tela inicial -->
+  <script type="module" src="./src/js/home.js"></script>
+
+</body>
+</html>
